@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="bg-blue-500">
+    <main class=" h-auto w-full  ">
+      <form action="" class="md:flex  px-4">
+        <div class="h-auto md:w-1/2 w-full bg-white rounded-2xl px-10 pt-12 pb-8 my-3">
+          <h1 class="text-indigo-700 text-3xl ml-8 mb-12">
+            General Information
+          </h1>
+          <div class="flex flex-col gap-6">
+            <select
+              name="Title"
+              id="title"
+              class="border-2 w-full h-10 px-4 text-slate-500 font-semibold"
+            >
+              <option value="">Title</option>
+              <option value="">this</option>
+            </select>
+            <div class="flex w-full justify-evenly gap-6">
+              <input
+                type="text"
+                placeholder="First Name"
+                class="outline-2 h-10 px-4 w-3/4 capitalize outline-slate-500"
+              />
+              <input
+                type="text"
+                placeholder="last Name"
+                class="outline-2 h-10 px-4 w-3/4 capitalize outline-slate-500"
+              />
+            </div>
+            <select
+              name="position"
+              id="position"
+              class="border-2 w-full h-10 px-4 text-slate-500 font-semibold"
+            >
+              <option value="">Position</option>
+              <option value="">this</option>
+            </select>
+            <input
+              type="text"
+              placeholder="Position"
+              class="border-2 border-slate-500 h-10 px-4"
+            />
+            <div class="flex w-full gap-4 items-center">
+              <input
+                type="text"
+                name="bussiness_arena"
+                id="bussiness_arena"
+                placeholder="Bussiness Arena"
+                class="w-3/4 h-10 border-2 border-slate-500 px-4"
+              />
+              <select
+                name="positions"
+                id="positions"
+                placeholder="Positions"
+                class="w-3/4 border-2 border-slate-500 px-4 h-10"
+              >
+                <option value="">Employees</option>
+                <option value="">this</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="h-auto md:w-1/2 w-full bg-indigo-700 text-white rounded-2xl my-2">
+          <h1 class="text-white text-3xl mt-12 ml-8 mb-12">Contact Details</h1>
+          <div class="md:flex flex-col px-12 gap-6">
+            <input
+              type="text"
+              name="streeta_nr"
+              id="streeta_nr"
+              placeholder="streeta+ nr"
+              class="border-2 h-10 border-white px-4 font-semibold capitalize placeholder-white outline-0"
+            />
+            <input
+              type="text"
+              name="additional_information"
+              id="additional_information"
+              placeholder="Additional Information"
+              class="border-2 h-10 border-white px-4 font-semibold capitalize placeholder-white outline-0"
+            />
+            <div class="flex items-center h-10 w-full gap-8">
+              <input
+                type="text"
+                name="zip_code"
+                id="zip_code"
+                placeholder="Zip Code"
+                class="boder-2 border-white placeholder-white h-10 px-4 outline-2 w-1/2 font-semibold capitalize"
+              />
+              <input
+                type="text"
+                name="place"
+                id="place"
+                placeholder="Place"
+                class="border-white placeholder-white h-10 w-1/2 px-4 outline-2 font-semibold capitalize"
+              />
+            </div>
+            <input
+              type="text"
+              name="country"
+              id="country"
+              placeholder="Country"
+              class="border-2 border-white placeholder-white h-10 px-4 font-semibold outline-0"
+            />
+            <div class="flex gap-4">
+              <div
+                class="border-2 border-white h-10 flex justify-center items-center"
+              >
+                <label for="code" class="px-4 font-semibold">Code +</label>
+                <input
+                  type="number"
+                  name="code"
+                  id="code"
+                  placeholder=""
+                  class="[appearance:textfield] h-10 outline-none"
+                />
+              </div>
+              <input type="number" name="" id="" placeholder="Phone NUmber" class="[appearance:textfield] h-10 outline-none border-2 w-1/2 px-4 placeholder-white font-semibold"/>
+            </div>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Your Email"
+              class="border-2 border-white placeholder-white h-10 px-4 font-semibold"
+            />
+            <div class="flex gap-4">
+              <input type="checkbox" name="check" id="check" placeholder="" />
+              <p>I do accept the 
+                <a href="" class="underline">Terms and Conditions</a> of your site.</p>
+            </div>
+            <button
+              type="submit"
+              class="h-10 bg-white uppercase text-black mb-10 w-24"
+            >
+              REGISTER
+            </button>
+          </div>
+        </div>
+      </form>
+    </main>
+  </body>
+</html>
