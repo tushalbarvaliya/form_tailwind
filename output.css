@@ -15,6 +15,7 @@
     --color-slate-400: oklch(70.4% 0.04 256.788);
     --color-slate-500: oklch(55.4% 0.046 257.417);
     --color-slate-800: oklch(27.9% 0.041 260.031);
+    --color-slate-900: oklch(20.8% 0.042 265.755);
     --color-black: #000;
     --color-white: #fff;
     --spacing: 0.25rem;
@@ -179,14 +180,11 @@
   }
 }
 @layer utilities {
-  .mx-1 {
-    margin-inline: calc(var(--spacing) * 1);
-  }
   .mx-2 {
     margin-inline: calc(var(--spacing) * 2);
   }
-  .my-2 {
-    margin-block: calc(var(--spacing) * 2);
+  .mx-4 {
+    margin-inline: calc(var(--spacing) * 4);
   }
   .my-4 {
     margin-block: calc(var(--spacing) * 4);
@@ -224,11 +222,29 @@
   .h-32 {
     height: calc(var(--spacing) * 32);
   }
+  .h-100 {
+    height: calc(var(--spacing) * 100);
+  }
   .h-auto {
     height: auto;
   }
+  .h-dvh {
+    height: 100dvh;
+  }
+  .h-full {
+    height: 100%;
+  }
   .h-screen {
     height: 100vh;
+  }
+  .w-1 {
+    width: calc(var(--spacing) * 1);
+  }
+  .w-1\/2 {
+    width: calc(1/2 * 100%);
+  }
+  .w-1\/4 {
+    width: calc(1/4 * 100%);
   }
   .w-3 {
     width: calc(var(--spacing) * 3);
@@ -308,6 +324,9 @@
   .border-white {
     border-color: var(--color-white);
   }
+  .bg-black {
+    background-color: var(--color-black);
+  }
   .bg-blue-500 {
     background-color: var(--color-blue-500);
   }
@@ -363,12 +382,6 @@
   .text-indigo-700 {
     color: var(--color-indigo-700);
   }
-  .text-red-500 {
-    color: var(--color-red-500);
-  }
-  .text-slate-400 {
-    color: var(--color-slate-400);
-  }
   .text-slate-500 {
     color: var(--color-slate-500);
   }
@@ -411,12 +424,18 @@
     --tw-outline-style: none;
     outline-style: none;
   }
-  .selection\:text-yellow-400 {
-    & *::selection {
-      color: var(--color-yellow-400);
+  .hover\:bg-black {
+    &:hover {
+      @media (hover: hover) {
+        background-color: var(--color-black);
+      }
     }
-    &::selection {
-      color: var(--color-yellow-400);
+  }
+  .hover\:bg-slate-900 {
+    &:hover {
+      @media (hover: hover) {
+        background-color: var(--color-slate-900);
+      }
     }
   }
   .hover\:bg-yellow-600 {
@@ -478,9 +497,14 @@
       justify-content: space-evenly;
     }
   }
-  .lg\:w-1\/2 {
+  .md\:gap-4 {
+    @media (width >= 48rem) {
+      gap: calc(var(--spacing) * 4);
+    }
+  }
+  .lg\:w-3\/4 {
     @media (width >= 64rem) {
-      width: calc(1/2 * 100%);
+      width: calc(3/4 * 100%);
     }
   }
   .lg\:flex-row {
