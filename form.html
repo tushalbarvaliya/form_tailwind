@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body class="bg-blue-500 ">
-    <main class="h-auto w-full mt-4">
+    <main class="h-screen w-full my-4">
       <form action="./index.html" class="md:flex px-4">
         <div
           class="h-auto md:w-1/2 w-full bg-white rounded-2xl px-10 pt-12 pb-8"
@@ -19,10 +19,12 @@
             <select
               name="Title"
               id="title"
-              class="border-2 w-full h-10 px-4 text-slate-500 font-semibold"
+              class="border-2 w-full h-10 px-4 text-slate-500 font-semibold border-slate-500"
+              onchange="this.classList.remove('text-slate-500');"
             >
-              <option value="Title">Title</option>
-              <option value="this">this</option>
+              <option value="Title" disabled selected hidden>Title</option>
+              <option value="Mr.">Mr.</option>
+              <option value="Miss.">Miss.</option>
             </select>
             <div
               class="w-full    flex md:flex-row flex-col  gap-6  sm:gap-6 md:justify-evenly"
@@ -41,15 +43,18 @@
             <select
               name="position"
               id="position"
-              class="border-2 w-full h-10 px-4 text-slate-500 font-semibold"
+              class="border-2 outline-none w-full h-10 px-4 text-slate-500 border-slate-500 font-semibold"
+              onchange="this.classList.remove('text-slate-500');"
             >
-              <option value="">Position</option>
-              <option value="">this</option>
+              <option value="" selected disabled hidden>Position</option>
+              <option value="intern" >intern</option>
+              <option value="manager">manager</option>
+              <option value="developer">developer</option>
             </select>
             <input
               type="text"
               placeholder="Position"
-              class="border-2 border-slate-500 h-10 px-4"
+              class="border-2 border-slate-500 h-10 px-4 outline-none"
             />
             <div class="flex sm:flex-row flex-col w-full gap-4 items-center">
               <input
@@ -57,16 +62,20 @@
                 name="bussiness_arena"
                 id="bussiness_arena"
                 placeholder="Bussiness Arena"
-                class="sm:w-3/4 w-full h-10 border-2 border-slate-500 px-4"
+                class="sm:w-3/4 w-full h-10 border-2 border-slate-500 px-4 outline-none"
               />
               <select
                 name="positions"
                 id="positions"
                 placeholder="Positions"
                 class="sm:w-3/4 w-full border-2 border-slate-500  text-slate-500 px-4 h-10"
+                onchange="this.classList.remove('text-slate-500');"
               >
-                <option value="">Employees</option>
-                <option value="">this</option>
+                <option value="" selected hidden disabled>Employees</option>
+                <option value="ID1">ID1</option>
+                <option value="ID2">ID2</option>
+                <option value="ID3">ID3</option>
+                <option value="ID4">ID4</option>
               </select>
             </div>
           </div>
@@ -77,7 +86,7 @@
           <h1 class="text-white text-3xl  ml-8 mb-12">
             Contact Details
           </h1>
-          <div class="flex  flex-col px-12 gap-4 w-full">
+          <div class="flex  flex-col px-12 gap-6 w-full">
             <input
               type="text"
               name="streeta_nr"
@@ -92,7 +101,7 @@
               placeholder="Additional Information"
               class="border-2 h-10 border-white px-4 w-full font-semibold capitalize placeholder-white outline-0"
             />
-            <div class="flex  md:flex-row flex-col items-center h-auto w-full gap-4 my-2">
+            <div class="flex  md:flex-row flex-col items-center h-auto w-full gap-6">
               <input
                 type="text"
                 name="zip_code"
@@ -115,25 +124,25 @@
               placeholder="Country"
               class="border-2 border-white w-full placeholder-white h-10 px-4 font-semibold outline-0"
             />
-            <div class="flex flex-col lg:flex-row gap-4 ">
+            <div class="flex flex-col lg:flex-row md:gap-4  gap-6">
               <div
-                class="border-2 border-white h-10 flex md:justify-center justify-around items-center"
+                class="border-2 w-1/4 border-white h-10 flex md:justify-center justify-around items-center"
               >
-                <label for="code" class="mx-1 font-semibold border-0 ">Code +</label>
+                <label for="code" class="mx-4 font-semibold border-0 w-1/2">Code +</label>
                 <input
                   type="number"
                   name="code"
                   id="code"
                   placeholder=""
-                  class="[appearance:textfield] h-10 outline-0 "
+                  class="[appearance:textfield] h-10 outline-0 w-1/2"
                 />
               </div>
               <input
                 type="number"
                 name=""
                 id=""
-                placeholder="Phone NUmber"
-                class="[appearance:textfield] h-10 outline-none border-2 lg:w-1/2 w-full px-4 placeholder-white font-semibold"
+                placeholder="Phone Number"
+                class="[appearance:textfield] h-10 outline-none border-2 lg:w-3/4 w-full px-4 placeholder-white font-semibold "
               />
             </div>
             <input
@@ -141,7 +150,7 @@
               name="email"
               id="email"
               placeholder="Your Email"
-              class="border-2 border-white placeholder-white h-10 px-4  w-full font-semibold"
+              class="border-2 border-white outline-0  placeholder-white h-10 px-4  w-full font-semibold"
             />
             <div class="flex gap-4 my-4">
               <input type="checkbox" name="check" id="check" placeholder="" />
@@ -153,7 +162,7 @@
             </div>
             <button
               type="submit"
-              class="h-10 bg-white uppercase text-black mb-10 w-24"
+              class="h-10 bg-white uppercase text-black mb-10 w-24 hover:bg-slate-900 "
             >
               REGISTER
             </button>
