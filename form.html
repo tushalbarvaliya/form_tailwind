@@ -19,10 +19,12 @@
             <select
               name="Title"
               id="title"
-              class="border-2 w-full h-10 px-4 text-slate-500 font-semibold"
+              class="border-2 w-full h-10 px-4 text-slate-500 font-semibold border-slate-500"
+              onchange="this.classList.remove('text-slate-500');"
             >
-              <option value="Title">Title</option>
-              <option value="this">this</option>
+              <option value="Title" disabled selected hidden>Title</option>
+              <option value="Mr.">Mr.</option>
+              <option value="Miss.">Miss.</option>
             </select>
             <div
               class="w-full    flex md:flex-row flex-col  gap-6  sm:gap-6 md:justify-evenly"
@@ -41,10 +43,13 @@
             <select
               name="position"
               id="position"
-              class="border-2 w-full h-10 px-4 text-slate-500 font-semibold"
+              class="border-2 w-full h-10 px-4 text-slate-500 border-slate-500 font-semibold"
+              onchange="this.classList.remove('text-slate-500');"
             >
-              <option value="">Position</option>
-              <option value="">this</option>
+              <option value="" selected disabled hidden>Position</option>
+              <option value="intern" >intern</option>
+              <option value="manager">manager</option>
+              <option value="developer">developer</option>
             </select>
             <input
               type="text"
@@ -64,9 +69,13 @@
                 id="positions"
                 placeholder="Positions"
                 class="sm:w-3/4 w-full border-2 border-slate-500  text-slate-500 px-4 h-10"
+                onchange="this.classList.remove('text-slate-500');"
               >
-                <option value="">Employees</option>
-                <option value="">this</option>
+                <option value="" selected hidden disabled>Employees</option>
+                <option value="ID1">ID1</option>
+                <option value="ID2">ID2</option>
+                <option value="ID3">ID3</option>
+                <option value="ID4">ID4</option>
               </select>
             </div>
           </div>
